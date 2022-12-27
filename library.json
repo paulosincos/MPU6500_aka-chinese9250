@@ -1,19 +1,19 @@
 {
-    "name": "MPU9250",
+    "name": "MPU6500",
     "keywords": "i2c,wire,imu",
-    "description": "Arduino library for MPU9250 Nine-Axis (Gyro + Accelerometer + Compass) MEMS MotionTracking™ Device",
-    "repository":
-    {
-        "type": "git",
-        "url": "https://github.com/hideakitai/MPU9250.git"
-    },
-    "authors":
-    {
-        "name": "Hideaki Tai",
-        "url": "https://github.com/hideakitai",
-        "maintainer": true
-    },
-    "version": "0.4.8",
+    "description": "Arduino library for MPU6500 Nine-Axis (Gyro + Accelerometer + Compass) MEMS MotionTracking™ Device",
+    // "repository":
+    // {
+    //     "type": "git",
+    //     "url": "https://github.com/hideakitai/MPU9250.git"
+    // },
+    // "authors":
+    // {
+    //     "name": "Hideaki Tai",
+    //     "url": "https://github.com/hideakitai",
+    //     "maintainer": true
+    // },
+    "version": "0.4.6",
     "license": "MIT",
     "frameworks": "arduino",
     "platforms": "*"

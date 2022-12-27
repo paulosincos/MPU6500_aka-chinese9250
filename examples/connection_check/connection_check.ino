@@ -1,4 +1,4 @@
-#include "MPU9250.h"
+#include "MPU6500.h"
 
 uint8_t addrs[7] = {0};
 uint8_t device_count = 0;
@@ -68,14 +68,6 @@ void setup() {
             Serial.print("WHO_AM_I is ");
             Serial.println(ca, HEX);
             Serial.println("Please use correct device");
-        }
-        static constexpr uint8_t AK8963_ADDRESS {0x0C};  //  Address of magnetometer
-        static constexpr uint8_t AK8963_WHOAMI_DEFAULT_VALUE {0x48};
-        byte cb = readByte(AK8963_ADDRESS, AK8963_WHO_AM_I);
-        if (cb == AK8963_WHOAMI_DEFAULT_VALUE) {
-            Serial.print("AK8963 (Magnetometer) is ready to use");
-        } else {
-            Serial.print("AK8963 (Magnetometer) was not found");
         }
     }
 }
