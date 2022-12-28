@@ -1,3 +1,24 @@
+# Work in Progress Fork
+
+This fork is a working in progress convertion of hideakitai/MPU9250 repository to support fake MPU9250 that not work as expected.
+
+In fact, these fake sensors are MPU6500 and has no magnetometers, or if it has magnetomers, it is a mistery on how it can be activated.
+
+The goal of this fork is to bring compatibility to work as MPU6500 with accelerometer and gyro.
+
+The quarternions filters was removed due to:
+
+ - better code abstraction, this repo only cover the raw sensor funcionality;
+ - a quaternion calculation needs a magnetomer to work as expected, so, you will need a additional magnetometer sensor, since these fake sensors doesn't has one (or its doesn't work); Trying to adapt a quaternion to work with no magnetometer will trap you in a issue called yaw drift, that make fake yaw moves even if the sensor is still on a flat table. This fake moves ins't constant and can't be normalized without a magnetomer, I tried it a lot and ended up buying a external magnetometer (QMC5883L) to work together the fake mpu;
+ - a specific repository with a abstract quaternion will be created;
+
+To use this lib, instead importing the `MPU9250.h` (from hideakitai), import the `MPU6500_Raw.h`, but remember the code is not the same.
+
+==========================================
+# Original read-me from source repository
+
+==========================================
+
 # MPU9250
 
 Arduino library for [MPU9250](https://www.invensense.com/products/motion-tracking/9-axis/mpu-9250/) Nine-Axis (Gyro + Accelerometer + Compass) MEMS MotionTracking™ Device
